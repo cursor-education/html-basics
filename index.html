@@ -30,6 +30,29 @@
         .abbr {
             text-transform: none !important;
         }
+
+        .half {
+            width: 45% !important;
+            float: left;
+        }
+
+        .third {
+            width: 30%;
+            float: left;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+
+        .reveal pre {
+            text-align: inherit;
+        }
+
+        .reveal pre code {
+            height: 245px;
+        }
     </style>
 </head>
 <body>
@@ -64,14 +87,441 @@
             </section>
 
             <section>
-                <h2 class="abbr">DOCTYPE</h2>
-                <h2 class="abbr">HEAD</h2>
-                <h2 class="abbr">BODY</h2>
+                <div>
+                    <h3 class="abbr third">DOCTYPE</h3>
+                    <h3 class="abbr third">HEAD</h3>
+                    <h3 class="abbr third">BODY</h3>
+                </div>
+                <div>
+                    <div class="half">
+                        <img src="img/body.jpg">
+                    </div>
+                    <div class="half">
+                        <img src="img/head.jpg">
+                    </div>
+                </div>    
             </section>
-            
+
             <section>
-                <h2 class="abbr">DOCTYPE</h2>
+                <section>
+                    <h2 class="abbr">&lt;!DOCTYPE html&gt;</h2>
+                </section>
+                <section>
+                    <h2 class="abbr">OLD DOCTYPES</h2>
+                    <table class="data" style="font-size: 23px;">
+                        <tbody>
+                          <tr>
+                            <td colspan="2"><strong>HTML 4.01</strong></td>
+                          </tr>
+                          <tr>
+                            <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
+                          </tr>
+                          <tr>
+                            <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
+                          </tr>
+                          <tr>
+                            <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2"><strong>XHTML 1.0</strong></td>
+                          </tr>
+                          <tr>
+                            <td>&lt;!DOCTYPE html PUBLIC  "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
+                          </tr>
+                          <tr>
+                            <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</td>
+                          </tr>
+                          <tr>
+                            <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</td>
+                          </tr>
+                          <tr>
+                            <td colspan="2"><strong>XHTML 1.1</strong></td>
+                          </tr>
+                          <tr>
+                            <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </section>
+                <section>
+                    <h2>Rules of XHTML</h2>
+                        <ul>
+                            <li>All tags and their attributes must be typed in lower case;</li>
+                            <li>The value of any attribute must be enclosed in quotation marks;</li>
+                            <li>You must close all tags, even those that do not have a closing tag;</li>
+                            <li>Must follow the rules of correct tags nesting;</li>
+                            <li>You can not use a shortened tag attributes (without the quotes);</li>
+                            <li>Instead attribute name in certain situations should be used id;</li>
+                            <li>Always specify &lt;!DOCTYPE&gt;</li>
+                        </ul>
+                </section>    
+                <section>
+                    <h2>Browsers</h2>
+                    <ul>
+                        <li>Chrome</li>
+                        <li>Firefox</li>
+                        <li>Safari</li>
+                        <li>Internet Explorer</li>
+                        <li>Other</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Quirks mode</h2>
+                    <small><a href="https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mode">Quirks mode</a></small>
+                </section>
             </section>
+            <section>
+                <section>
+                    <h2>HEAD</h2>
+                    <ul class="half">
+                        <li>&lt;title&gt; (this element is required in an 
+                        HTML document)</li>
+                        <li>&lt;style&gt;</li>
+                        <li>&lt;base&gt;</li>
+                        <li>&lt;link&gt;</li>
+                        <li>&lt;meta&gt;</li>
+                        <li>&lt;script&gt;</li>
+                    </ul>
+                    <div class="half">
+                        <img src="img/base.jpg">
+                    </div>    
+                </section>
+                <section>
+                    <ul>
+                        <li>&lt;meta charset="UTF-8"&gt;</li>
+                        <li>&lt;meta name="description" content=""&gt;</li>
+                        <li>&lt;meta name="keywords" content=""&gt;</li>
+                        <li>&lt;meta name="author" content=""&gt;</li>
+                    </ul>    
+                </section>
+            </section>
+            <section>
+                <h2>Global Attributes</h2>
+                <table class="w3-table-all notranslate">
+                    <tr>
+                    <th style="width:25%">Attribute</th>
+                    <th>Description</th>
+                    </tr>
+                    <tr>
+                    <td>accesskey</td>
+                    <td>Specifies a shortcut key to activate/focus an element</td>
+                    </tr>
+                    <tr>
+                    <td>class</td>
+                    <td>Specifies one or more classnames for an element (refers to a class in a style sheet)</td>
+                    </tr>
+                    <tr>
+                    <td>contenteditable</td>
+                    <td>Specifies whether the content 
+                    of an element is editable or not</td>
+                    </tr>
+                </table>
+            </section>
+            <section>   
+                <table class="w3-table-all notranslate">
+                    <tr>
+                    <td>contextmenu</td>
+                    <td>Specifies a context menu for an element. The context menu appears when a 
+                    user right-clicks on the element </td>
+                    </tr>
+                    <tr>
+                    <td>data-*</td>
+                    <td>Used to store custom data private to the page or application</td>
+                    </tr>
+                    <tr>
+                    <td>dir</td>
+                    <td>Specifies the text direction for the content in an element</td>
+                    </tr>
+                    </table>
+            </section>
+            <section>   
+                <table>
+                    <tr>
+                    <td>draggable</td>
+                    <td>Specifies whether an element is draggable or not</td>
+                    </tr>
+                    <tr>
+                    <td>dropzone</td>
+                    <td>Specifies whether the dragged data is copied, moved, or linked, when dropped</td>
+                    </tr>
+                    <tr>
+                    <td>hidden</td>
+                    <td>Specifies that an element is not yet, or is no longer, relevant</td>
+                    </tr>
+                    </table>
+            </section>
+            <section>   
+                <table>
+                    <tr>
+                    <td>id</td>
+                    <td>Specifies a unique id for an element</td>
+                    </tr>
+                    <tr>
+                    <td>lang</td>
+                    <td>Specifies the language of the element's content</td>
+                    </tr>
+                    <tr>
+                    <td>spellcheck</td>
+                    <td>Specifies whether the element is to have its spelling and grammar checked or 
+                    not</td>
+                    </tr>
+                    </table>
+            </section>
+            <section>   
+                <table>
+                    <tr>
+                    <td>style</a></td>
+                    <td>Specifies an inline CSS style for an element</td>
+                    </tr>
+                    <tr>
+                        <td>tabindex</td>
+                        <td>Specifies the tabbing order of an element</td>
+                      </tr>
+                    <tr>
+                    <td>title</td>
+                    <td>Specifies extra information about an element</td>
+                    </tr>
+                    <tr>
+                    <td>translate</td>
+                    <td>Specifies whether the content of an element should be translated or not</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h2>Block and inline element</h2>
+                <p>Block elements occupy all available width of container, height of these component is determined by its content, and it always starts on a new line.</p>
+                <p>Inline elements are directly part of another element, such as a text paragraph. They are mainly used to change the appearance of text or a logical selection.</p>
+                <p>You can not insert an block elements into inline elements according to specification (eg &lt;h1&gt; in &lt;a&gt;).</p>
+            </section>
+            <section>
+                <h2>Headings</h2>
+                <ul class="half">
+                        <li>&lt;h1&gt;My Title&lt;/h1&gt;</li>
+                        <li>&lt;h2&gt;My Title&lt;/h2&gt;</li>
+                        <li>&lt;h3&gt;My Title&lt;/h3&gt;</li>
+                        <li>&lt;h4&gt;My Title&lt;/h4&gt;</li>
+                        <li>&lt;h5&gt;My Title&lt;/h5&gt;</li>
+                        <li>&lt;h6&gt;My Title&lt;/h6&gt;</li>
+                    </ul>
+                    <div class="half">
+                        <img src="img/headings.jpg">
+                    </div> 
+            </section>
+            <section>
+                <h2>Headings</h2>
+                <pre class="half">
+                    <h2>Headings</h2>
+                    <h3>Headings</h3>
+                    <h4>Headings</h4>
+                </pre> 
+                <div class="half">      
+                    <div>
+                        <div>&lt;h2&gt;Headings&lt;/h2&gt;</div>
+                        <div>&lt;h3&gt;Headings&lt;/h3&gt;</div>
+                        <div>&lt;h4&gt;Headings&lt;/h4&gt;</div>
+                    </div>
+                </div> 
+            </section> 
+            <section>
+                <h2>Paragraph</h2>
+                    <ul class="half">
+                        <li>&lt;p&gt;My Paragraph&lt;/p&gt;</li>
+                    </ul>
+                    <div class="half">
+                        <img src="img/paragraph.jpg">
+                    </div> 
+            </section>
+            <section>
+                <h2>some other block elements</h2>
+                    <ul class="">
+                        <li>&lt;pre&gt;Preformatted text&lt;/pre&gt;</li>
+                        <li>&lt;address&gt;NOT post address&lt;/address&gt;</li>
+                        <li>&lt;bloquote&gt;Quoted text&lt;/bloquote&gt;</li>
+                    </ul>
+            </section>
+            <section>
+                <h2>Links</h2>
+                    <ul class="">
+                        <li>&lt;a href="www.rostov.nah" target="_blank"&gt;Where is the president should go?&lt;/a&gt;</li>
+                    </ul>
+            </section>
+            <section>
+                <h2>Links</h2>
+                <h3>Ordered list:</h3>
+                <pre class="half">
+                    <a href="www.rostov.nah" target="_blank" style="
+    text-align: left;
+    display: inline-block;
+">Where is the president should go?</a>
+                </pre> 
+                <div class="half">      
+                    <div>&lt;a href="www.rostov.nah" target="_blank"&gt;Where is the president should go?&lt;/a&gt;</div>
+                </div> 
+            </section>
+            <section>
+                <h2>some other inline elements</h2>
+                    <ul class="">
+                        <li>&lt;sub&gt;just text&lt;/sub&gt;</li>
+                        <li>&lt;sup&gt;just text&lt;/sup&gt;</li>
+                        <li>&lt;del&gt;just text&lt;/del&gt;</li>
+                        <li>&lt;code&gt;just text&lt;/code&gt;</li>
+                        <li>&lt;q&gt;just text&lt;/q&gt;</li>
+                        <li>&lt;cite&gt;just text&lt;/cite&gt;</li>
+                    </ul>
+            </section>
+            <section>
+                <h2>some other inline elements</h2>
+                    <ul class="">
+                        <li>&lt;b&gt;just text&lt;/b&gt;</li>
+                        <li>&lt;strong&gt;just text&lt;/strong&gt;</li>
+                        <li>&lt;i&gt;just text&lt;/i&gt;</li>
+                        <li>&lt;em&gt;just text&lt;/em&gt;</li>
+                    </ul>
+            </section>
+            <section>
+                <h2>some other inline elements</h2>
+                    <ul class="">
+                        <li>&lt;br /&gt;</li>
+                        <li>&lt;hr /&gt;</li>
+                    </ul>
+            </section>
+            <section>
+                <h2>Lists</h2>
+                <h3>Ordered list:</h3>
+                <pre class="half">
+                    <ol>
+                        <li>Firts item</li>
+                        <li>Second item</li>
+                    </ol>
+                </pre> 
+                <div class="half">      
+                    <div>
+                        <div>&lt;ol&gt;</div>
+                        <div>&lt;li&gt;Firts item&lt;/li&gt;</div>
+                        <div>&lt;li&gt;Second item&lt;/li&gt;</div>
+                        <div>&lt;/ol&gt;</div>
+                    </div>
+                </div> 
+            </section>
+            <section>
+                <h2>Lists</h2>
+                <h3>Unordered list:</h3>
+                <pre class="half">
+                    <ul>
+                        <li>Firts item</li>
+                        <li>Second item</li>
+                    </ul>
+                </pre> 
+                <div class="half">      
+                    <div>
+                        <div>&lt;ul&gt;</div>
+                        <div>&lt;li&gt;Firts item&lt;/li&gt;</div>
+                        <div>&lt;li&gt;Second item&lt;/li&gt;</div>
+                        <div>&lt;/ul&gt;</div>
+                    </div>
+                </div> 
+            </section>
+            <section>
+                <h2>Images</h2>
+                <pre class="half">
+                    <img src="img/download.jpg">
+                </pre> 
+                <div class="half">      
+                    <div>
+                        <div>&lt;img src="img/starwars.jpg" alt="Starwars" /&gt;</div>
+                    </div>
+                </div> 
+            </section> 
+            <section>
+                <h1 id="tables">Tables</h1>
+                    <p><code>&lt;table&gt;</code> It is used
+                    as a container for elements that define the contents of the table.
+                    Every table has a rows and cells are set using tags 
+                    <code>&lt;tr&gt;</code> and 
+                    <code>&lt;td&gt;</code>. Inside <code>&lt;table&gt;</code> it is permissible to use
+                    the following elements: <code>&lt;caption&gt;</code>, <code>&lt;col&gt;</code>, 
+                    <code>&lt;colgroup&gt;</code>, <code >&lt;tbody&gt;</code>, <code>&lt;td&gt;</code>, 
+                    <code>&lt;tfoot&gt;</code>, <code>colspan</code> attribute is
+                    used to conbine neighboring columns in the table <code>rowspan</code> - to combine rows.</p>
+            </section>
+            <section>
+                <h2>Tables</h2>
+                <pre class="half">
+                    <div class="demo">
+                        <style>
+                        .table-demo {
+                            width: 40%;
+                            border: #ccc solid 1px;
+                            border-collapse: collapse;
+                        }
+                        .table-demo th,
+                        .table-demo td {
+                            padding: 5px;
+                            border: 1px solid #ccc;
+                            border-bottom: 1px solid #ccc !important;
+                         }   
+                        </style>
+                        <div>
+                        <table class="table-demo">
+                            <thead>
+                                <tr>
+                                    <th>Bus number</th>
+                                    <th>Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>3А</td>
+                                    <td rowspan="2">3 hrn</td>
+                                </tr>
+                                <tr>
+                                    <td>25</td>
+                                </tr>
+                                <tr>
+                                    <td>133</td>
+                                    <td>4 hrn</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </pre> 
+                <div class="half">      
+                    <div style="text-align: left; font-size: 18px; margin-left: 20px;">
+                        <div>&lt;table class="table-demo"&gt;</div>
+                            <div>&nbsp;&lt;thead&gt;</div>
+                                <div>&nbsp;&nbsp;&lt;tr&gt;</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&lt;th&gt;Bus number&lt;/th&gt;</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&lt;th&gt;Price&lt;/th&gt;</div>
+                                <div>&nbsp;&nbsp;&lt;/tr&gt;</div>
+                            <div>&nbsp;&lt;/thead&gt;</div>
+                            <div>&nbsp;&lt;tbody&gt;</div>
+                                <div>&nbsp;&nbsp;&lt;tr&gt;</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&lt;td&gt;3А&lt;/td&gt;</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&lt;td rowspan="2"&gt;3 hrn&lt;/td&gt;</div>
+                                <div>&nbsp;&nbsp;&lt;/tr&gt;</div>
+                                <div>&nbsp;&nbsp;&lt;tr&gt;</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&lt;td&gt;25&lt;/td&gt;</div>
+                                <div>&nbsp;&nbsp;&lt;/tr&gt;</div>
+                                <div>&nbsp;&nbsp;&lt;tr&gt;</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&lt;td&gt;133&lt;/td&gt;</div>
+                                    <div>&nbsp;&nbsp;&nbsp;&lt;td&gt;4 hrn&lt;/td&gt;</div>
+                                <div>&nbsp;&nbsp;&lt;/tr&gt;</div>
+                            <div>&nbsp;&lt;/tbody&gt;</div>
+                        <div>&lt;/table&gt;</div>
+                    </div>
+                </div> 
+            </section>
+
+            <section>
+                <h2 id="elements-with-no-semantic-meaning">Elements with no semantic meaning</h2>
+                <p>These tags are designed to highlight the portion of the document to change the appearance of the content but without creating additional semantic value fragment.</p>
+                <p>&lt;div&gt;</code> - block element</p>
+                <p>&lt;span&gt;</code> - inline element</p>
+            </section>    
+
+            <section>
+                <a href="http://www.w3schools.com/html/default.asp">W3Schools</a>
+            </section>    
         </div>
     </div> 
 
