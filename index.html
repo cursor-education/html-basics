@@ -1,542 +1,1284 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-
-    <title>HTML | Basics</title>
-
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-    <link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/css/reveal.css">
-    <link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/css/theme/cursor-education.css" id="theme">
-    <link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/css/theme/cursor-education-more.css" id="theme">
-
-    <link rel="stylesheet" href="http://cursor-education.github.io/style/reveal/lib/css/zenburn.css">
-
-    <!--[if lt IE 9]>
-      <script src="http://cursor-education.github.io/style/reveal/lib/js/html5shiv.js"></script>
-    <![endif]-->
-
-    <style>
-        .abbr i {
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML</title>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/white.css">
+        <link rel="stylesheet" type="text/css" href="lib/css/zenburn.css">
+        <style type="text/css">
+          .abbr i {
             color: orange;
             text-decoration: none;
             text-transform: none;
             font-style: normal;
-        }
-
-        .abbr {
-            text-transform: none !important;
-        }
-
-        .half {
-            width: 45% !important;
+          }
+          .w-1-2 {
+            width: 60%;
             float: left;
-        }
-
-        .third {
-            width: 30%;
+          }
+          .reveal .demo h1 {
+            font-size: 24px;
+          }
+          .reveal .demo h2 {
+            font-size: 22px;
+          }
+          .reveal .demo h3 {
+            font-size: 20px;
+          }         
+          .reveal .demo h4 {
+            font-size: 18px;
+          }
+          .reveal .demo h5 {
+            font-size: 16px;
+          }
+          .reveal .demo h6 {
+            font-size: 14px;
+          }
+          .reveal .demo p {
+            font-size: 16px;
+          }
+          .reveal .demo * {
+            text-transform: none;
+            text-align: left;
+            font-size: 16px;
+          }
+          .reveal .demo pre {
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+          }
+          .reveal .demo ul, .reveal .demo ol, .reveal .demo dl {
+            margin: 0;
+            padding: 0;
+            padding-left: 20px;
             float: left;
-        }
-
-        img {
+          }
+          .reveal .demo ul ul, .reveal .demo ol ul,
+          .reveal .demo ul ol, .reveal .demo ol ol {
+            float: none;
+          }
+          .reveal .demo blockquote {
+            margin: 0;
+            padding: 0;
+            box-shadow: none;
+          }
+          .reveal .demo {
+            border: 2px solid grey;
+            padding: 2%;
+            width: 34%;
+            margin-top: 20px;
+            position: relative;
+          }
+          .reveal .demo:before {
+            position: absolute;
+            content: 'demo.html';
+            display: block;
+            background: #4250ff;
+            height: 28px;
+            width: 100px;
+            top: -28px;
+            left: 0;
+            line-height: 28px;
+            font-size: 16px;
+            color: white;
+          }
+          .reveal .demo a {
+            float: left;
+          }
+          .reveal .demo table {
+            float: left;
+          }
+          .reveal .demo tr, .reveal .demo td, .reveal .demo th {
+            border: none;
+          }
+          .reveal .table-demo {
             width: 100%;
-            height: auto;
-        }
-
-        .reveal pre {
-            text-align: inherit;
-        }
-
-        .reveal pre code {
-            height: 245px;
-        }
-    </style>
-</head>
-<body>
-    <div class="reveal">
-        <div class="slides">
-            <section>
-                <h1>HTML Basics</h1>
-                <small>
-                    <a href="https://github.com/CubaSAN" target="_blank">CubaSAN</a>/
-                    <a style="display:inline-block" href="http://cursor.education/" target="_blank">CURSOR Education School</a>
-                  </small>
-            </section>
-
-            <section>
-                <h2 class="abbr"><i>H</i>yper<i>T</i>ext<i>M</i>arkup<i>L</i>anguage</h2>
-            </section>
-
-            <section>
+            border: #ccc solid 1px;
+            border-collapse: collapse;
+          }
+          .reveal .table-demo caption {
+            text-align: right;
+            font-size: 12px;
+            font-style: italic;
+            padding-right: 10px;
+          }
+          .reveal .table-demo th,
+          .reveal .table-demo td {
+            padding: 5px;
+            border: 1px solid #ccc;
+          }
+          .reveal .demo form textarea {
+            float: left;
+            margin: 0;
+            padding: 0;
+            text-align: left;
+          }
+        </style>
+    </head>
+    <body>
+        <div class="reveal">
+            <div class="slides">
                 <section>
-                    <h3>HTML Document consists from tags</h3>
-                    <br />
-                    <p>&lt;h1 name="value"&gt;Content&lt;/h1&gt;</p>
-                    <p>&lt;input name="value" /&gt;</p>
-                    <p>&lt;!DOCTYPE definition&gt;</p>
+                  <h1>HTML</h1>
                 </section>
                 <section>
-                    <p>&lt;p&gt;&lt;p&gt;</p>
-                    <p>&lt;p id="paragraph"&gt;&lt;p&gt;</p>
-                    <p>&lt;p id="paragraph" class="lorem"&gt;&lt;p&gt;</p>
-                    <p>&lt;br /&gt;</p>
-                </section>    
-            </section>
-
-            <section>
-                <div>
-                    <h3 class="abbr third">DOCTYPE</h3>
-                    <h3 class="abbr third">HEAD</h3>
-                    <h3 class="abbr third">BODY</h3>
-                </div>
-                <div>
-                    <div class="half">
-                        <img src="img/body.jpg">
-                    </div>
-                    <div class="half">
-                        <img src="img/head.jpg">
-                    </div>
-                </div>    
-            </section>
-
-            <section>
-                <section>
-                    <h2 class="abbr">&lt;!DOCTYPE html&gt;</h2>
-                </section>
-                <section>
-                    <h2 class="abbr">OLD DOCTYPES</h2>
-                    <table class="data" style="font-size: 23px;">
-                        <tbody>
-                          <tr>
-                            <td colspan="2"><strong>HTML 4.01</strong></td>
-                          </tr>
-                          <tr>
-                            <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</td>
-                          </tr>
-                          <tr>
-                            <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</td>
-                          </tr>
-                          <tr>
-                            <td>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</td>
-                          </tr>
-                          <tr>
-                            <td colspan="2"><strong>XHTML 1.0</strong></td>
-                          </tr>
-                          <tr>
-                            <td>&lt;!DOCTYPE html PUBLIC  "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</td>
-                          </tr>
-                          <tr>
-                            <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</td>
-                          </tr>
-                          <tr>
-                            <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</td>
-                          </tr>
-                          <tr>
-                            <td colspan="2"><strong>XHTML 1.1</strong></td>
-                          </tr>
-                          <tr>
-                            <td>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</td>
-                          </tr>
-                        </tbody>
-                    </table>
-                </section>
-                <section>
-                    <h2>Rules of XHTML</h2>
-                        <ul>
-                            <li>All tags and their attributes must be typed in lower case;</li>
-                            <li>The value of any attribute must be enclosed in quotation marks;</li>
-                            <li>You must close all tags, even those that do not have a closing tag;</li>
-                            <li>Must follow the rules of correct tags nesting;</li>
-                            <li>You can not use a shortened tag attributes (without the quotes);</li>
-                            <li>Instead attribute name in certain situations should be used id;</li>
-                            <li>Always specify &lt;!DOCTYPE&gt;</li>
-                        </ul>
-                </section>    
-                <section>
-                    <h2>Browsers</h2>
+                  <section>
+                    <h3 class="abbr">
+                      <i>H</i>yper&nbsp;
+                      <i>T</i>ext&nbsp;
+                      <i>M</i>arkup&nbsp;
+                      <i>L</i>anguage</h3>
+                  </section>
+                  <section>
+                    <h4>Only one history slide</h4>
+                    <img src="img/berners.jpg" alt="">
+                    <p>In 1989, Tim Berners-Lee, presented the first HTML without version</p>
+                    <p>@timberners_lee</p>
+                  </section>
+                  <section>
                     <ul>
-                        <li>Chrome</li>
-                        <li>Firefox</li>
-                        <li>Safari</li>
-                        <li>Internet Explorer</li>
-                        <li>Other</li>
+                      <li>HTML consists from tags, ordered into DOM tree</li>
+                      <li>Based on SGML (special markup language)</li>
+                      <li>Has no strict rules, about how tags should be written (small, caps, closed, singlequoted, doublequoted, etc.)</li>
                     </ul>
+                  </section>
                 </section>
-                <section>
-                    <h2>Quirks mode</h2>
-                    <small><a href="https://developer.mozilla.org/en-US/docs/Quirks_Mode_and_Standards_Mode">Quirks mode</a></small>
-                </section>
-            </section>
-            <section>
-                <section>
-                    <h2>HEAD</h2>
-                    <ul class="half">
-                        <li>&lt;title&gt; (this element is required in an 
-                        HTML document)</li>
-                        <li>&lt;style&gt;</li>
-                        <li>&lt;base&gt;</li>
-                        <li>&lt;link&gt;</li>
-                        <li>&lt;meta&gt;</li>
-                        <li>&lt;script&gt;</li>
-                    </ul>
-                    <div class="half">
-                        <img src="img/base.jpg">
-                    </div>    
-                </section>
-                <section>
+                <section data-markdown>
+                  <script type="text/template">
+                    ### Tags
+                    ``` html
+                    <p> Opening and closing tag </p>
+
+                    <br /> - Self closed tag without data inside
+
                     <ul>
-                        <li>&lt;meta charset="UTF-8"&gt;</li>
-                        <li>&lt;meta name="description" content=""&gt;</li>
-                        <li>&lt;meta name="keywords" content=""&gt;</li>
-                        <li>&lt;meta name="author" content=""&gt;</li>
-                    </ul>    
+                      <li>Tags can contain</li>
+                      <li>Other <em>tags</em></li>
+                      <li>Inside...</li>
+                    </ul>
+
+                    <!DOCTYPE html>
+
+                    <!-- Comment tag has differen structure -->
+                    ```
+                  </script>
+                </section>  
+                <section data-markdown>
+                  <script type="text/template">
+                  #### Useful comments
+                  ``` html
+                  <!-- Header: BEGIN -->
+                  <header>
+                    <nav><ul><li>Homepage</li></ul></nav>
+                  </header>
+                  <!-- Header: END -->
+
+                  <!-- TODO: Add video tag instead of image -->
+                  <img src="video.jpg" alt="" />
+
+                  <!-- FIXME: Make this tag visible in Safari 5.7 -->
+                  <progress value="20" max="1000">
+                  ```
+                  </script>
                 </section>
-            </section>
-            <section>
-                <h2>Global Attributes</h2>
-                <table class="w3-table-all notranslate">
-                    <tr>
-                    <th style="width:25%">Attribute</th>
-                    <th>Description</th>
-                    </tr>
-                    <tr>
-                    <td>accesskey</td>
-                    <td>Specifies a shortcut key to activate/focus an element</td>
-                    </tr>
-                    <tr>
-                    <td>class</td>
-                    <td>Specifies one or more classnames for an element (refers to a class in a style sheet)</td>
-                    </tr>
-                    <tr>
-                    <td>contenteditable</td>
-                    <td>Specifies whether the content 
-                    of an element is editable or not</td>
-                    </tr>
-                </table>
-            </section>
-            <section>   
-                <table class="w3-table-all notranslate">
-                    <tr>
-                    <td>contextmenu</td>
-                    <td>Specifies a context menu for an element. The context menu appears when a 
-                    user right-clicks on the element </td>
-                    </tr>
-                    <tr>
-                    <td>data-*</td>
-                    <td>Used to store custom data private to the page or application</td>
-                    </tr>
-                    <tr>
-                    <td>dir</td>
-                    <td>Specifies the text direction for the content in an element</td>
-                    </tr>
-                    </table>
-            </section>
-            <section>   
-                <table>
-                    <tr>
-                    <td>draggable</td>
-                    <td>Specifies whether an element is draggable or not</td>
-                    </tr>
-                    <tr>
-                    <td>dropzone</td>
-                    <td>Specifies whether the dragged data is copied, moved, or linked, when dropped</td>
-                    </tr>
-                    <tr>
-                    <td>hidden</td>
-                    <td>Specifies that an element is not yet, or is no longer, relevant</td>
-                    </tr>
-                    </table>
-            </section>
-            <section>   
-                <table>
-                    <tr>
-                    <td>id</td>
-                    <td>Specifies a unique id for an element</td>
-                    </tr>
-                    <tr>
-                    <td>lang</td>
-                    <td>Specifies the language of the element's content</td>
-                    </tr>
-                    <tr>
-                    <td>spellcheck</td>
-                    <td>Specifies whether the element is to have its spelling and grammar checked or 
-                    not</td>
-                    </tr>
-                    </table>
-            </section>
-            <section>   
-                <table>
-                    <tr>
-                    <td>style</a></td>
-                    <td>Specifies an inline CSS style for an element</td>
-                    </tr>
-                    <tr>
-                        <td>tabindex</td>
-                        <td>Specifies the tabbing order of an element</td>
-                      </tr>
-                    <tr>
-                    <td>title</td>
-                    <td>Specifies extra information about an element</td>
-                    </tr>
-                    <tr>
-                    <td>translate</td>
-                    <td>Specifies whether the content of an element should be translated or not</td>
-                    </tr>
-                </table>
-            </section>
-            <section>
-                <h2>Block and inline element</h2>
-                <p>Block elements occupy all available width of container, height of these component is determined by its content, and it always starts on a new line.</p>
-                <p>Inline elements are directly part of another element, such as a text paragraph. They are mainly used to change the appearance of text or a logical selection.</p>
-                <p>You can not insert an block elements into inline elements according to specification (eg &lt;h1&gt; in &lt;a&gt;).</p>
-            </section>
-            <section>
-                <h2>Headings</h2>
-                <ul class="half">
-                        <li>&lt;h1&gt;My Title&lt;/h1&gt;</li>
-                        <li>&lt;h2&gt;My Title&lt;/h2&gt;</li>
-                        <li>&lt;h3&gt;My Title&lt;/h3&gt;</li>
-                        <li>&lt;h4&gt;My Title&lt;/h4&gt;</li>
-                        <li>&lt;h5&gt;My Title&lt;/h5&gt;</li>
-                        <li>&lt;h6&gt;My Title&lt;/h6&gt;</li>
-                    </ul>
-                    <div class="half">
-                        <img src="img/headings.jpg">
-                    </div> 
-            </section>
-            <section>
-                <h2>Headings</h2>
-                <pre class="half">
-                    <h2>Headings</h2>
-                    <h3>Headings</h3>
-                    <h4>Headings</h4>
-                </pre> 
-                <div class="half">      
-                    <div>
-                        <div>&lt;h2&gt;Headings&lt;/h2&gt;</div>
-                        <div>&lt;h3&gt;Headings&lt;/h3&gt;</div>
-                        <div>&lt;h4&gt;Headings&lt;/h4&gt;</div>
-                    </div>
-                </div> 
-            </section> 
-            <section>
-                <h2>Paragraph</h2>
-                    <ul class="half">
-                        <li>&lt;p&gt;My Paragraph&lt;/p&gt;</li>
-                    </ul>
-                    <div class="half">
-                        <img src="img/paragraph.jpg">
-                    </div> 
-            </section>
-            <section>
-                <h2>some other block elements</h2>
-                    <ul class="">
-                        <li>&lt;pre&gt;Preformatted text&lt;/pre&gt;</li>
-                        <li>&lt;address&gt;NOT post address&lt;/address&gt;</li>
-                        <li>&lt;bloquote&gt;Quoted text&lt;/bloquote&gt;</li>
-                    </ul>
-            </section>
-            <section>
-                <h2>Links</h2>
-                    <ul class="">
-                        <li>&lt;a href="www.rostov.nah" target="_blank"&gt;Where is the president should go?&lt;/a&gt;</li>
-                    </ul>
-            </section>
-            <section>
-                <h2>Links</h2>
-                <h3>Ordered list:</h3>
-                <pre class="half">
-                    <a href="www.rostov.nah" target="_blank" style="
-    text-align: left;
-    display: inline-block;
-">Where is the president should go?</a>
-                </pre> 
-                <div class="half">      
-                    <div>&lt;a href="www.rostov.nah" target="_blank"&gt;Where is the president should go?&lt;/a&gt;</div>
-                </div> 
-            </section>
-            <section>
-                <h2>some other inline elements</h2>
-                    <ul class="">
-                        <li>&lt;sub&gt;just text&lt;/sub&gt;</li>
-                        <li>&lt;sup&gt;just text&lt;/sup&gt;</li>
-                        <li>&lt;del&gt;just text&lt;/del&gt;</li>
-                        <li>&lt;code&gt;just text&lt;/code&gt;</li>
-                        <li>&lt;q&gt;just text&lt;/q&gt;</li>
-                        <li>&lt;cite&gt;just text&lt;/cite&gt;</li>
-                    </ul>
-            </section>
-            <section>
-                <h2>some other inline elements</h2>
-                    <ul class="">
-                        <li>&lt;b&gt;just text&lt;/b&gt;</li>
-                        <li>&lt;strong&gt;just text&lt;/strong&gt;</li>
-                        <li>&lt;i&gt;just text&lt;/i&gt;</li>
-                        <li>&lt;em&gt;just text&lt;/em&gt;</li>
-                    </ul>
-            </section>
-            <section>
-                <h2>some other inline elements</h2>
-                    <ul class="">
-                        <li>&lt;br /&gt;</li>
-                        <li>&lt;hr /&gt;</li>
-                    </ul>
-            </section>
-            <section>
-                <h2>Lists</h2>
-                <h3>Ordered list:</h3>
-                <pre class="half">
-                    <ol>
-                        <li>Firts item</li>
-                        <li>Second item</li>
-                    </ol>
-                </pre> 
-                <div class="half">      
-                    <div>
-                        <div>&lt;ol&gt;</div>
-                        <div>&lt;li&gt;Firts item&lt;/li&gt;</div>
-                        <div>&lt;li&gt;Second item&lt;/li&gt;</div>
-                        <div>&lt;/ol&gt;</div>
-                    </div>
-                </div> 
-            </section>
-            <section>
-                <h2>Lists</h2>
-                <h3>Unordered list:</h3>
-                <pre class="half">
+                <section>
+                  <section data-markdown>
+                    <script type="text/template">
+                    #### Attributes
+                    Key = Value pairs
+                    ``` html
+                    <a href="https://uk.wikipedia.org/wiki/HTML">Link to HTML</a>
+                    <img src="images/img.jpg" alt="Image">
+
+                    <form action="localhost/handler"></form>
+
+                    <div class="important text logo" id="logo_1">Awesome Company</div>
+
+                    <div data-student="John Doe" data-age="34">John Doe</div>
+                    ```
+
+                    </script>
+                  </section>
+                  <section>
+                    <h3><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">Global Attributes</a></h3>
                     <ul>
-                        <li>Firts item</li>
-                        <li>Second item</li>
+                      <li>class - specifies one or more classnames for an element (refers to a class in a style sheet)</li>
+                      <li>id - specifies a unique id for an element</li>
+                      <li>style - specifies an inline CSS style for an element</li>
+                      <li>tabindex - specifies the tabbing order of an element</li>
+                      <li>title - specifies extra information about an element</li>
+                      <li>hidden - specifies that an element is not yet, or is no longer, relevant</li>
+                      <li>data-* - used to store custom data private to the page or application</li>
                     </ul>
-                </pre> 
-                <div class="half">      
-                    <div>
-                        <div>&lt;ul&gt;</div>
-                        <div>&lt;li&gt;Firts item&lt;/li&gt;</div>
-                        <div>&lt;li&gt;Second item&lt;/li&gt;</div>
-                        <div>&lt;/ul&gt;</div>
-                    </div>
-                </div> 
-            </section>
-            <section>
-                <h2>Images</h2>
-                <pre class="half">
-                    <img src="img/download.jpg">
-                </pre> 
-                <div class="half">      
-                    <div>
-                        <div>&lt;img src="img/starwars.jpg" alt="Starwars" /&gt;</div>
-                    </div>
-                </div> 
-            </section> 
-            <section>
-                <h1 id="tables">Tables</h1>
-                    <p><code>&lt;table&gt;</code> It is used
-                    as a container for elements that define the contents of the table.
-                    Every table has a rows and cells are set using tags 
-                    <code>&lt;tr&gt;</code> and 
-                    <code>&lt;td&gt;</code>. Inside <code>&lt;table&gt;</code> it is permissible to use
-                    the following elements: <code>&lt;caption&gt;</code>, <code>&lt;col&gt;</code>, 
-                    <code>&lt;colgroup&gt;</code>, <code >&lt;tbody&gt;</code>, <code>&lt;td&gt;</code>, 
-                    <code>&lt;tfoot&gt;</code>, <code>colspan</code> attribute is
-                    used to conbine neighboring columns in the table <code>rowspan</code> - to combine rows.</p>
-            </section>
-            <section>
-                <h2>Tables</h2>
-                <pre class="half">
-                    <div class="demo">
-                        <style>
-                        .table-demo {
-                            width: 40%;
-                            border: #ccc solid 1px;
-                            border-collapse: collapse;
+                    <p>contextmenu, dir, accesskey, contenteditable, draggable, dropzone, lang, spellcheck</p>
+                  </section>
+                </section>
+                <section>
+                  <h3>XHTML - Good Rules</h3>
+                  <ul>
+                    <li>Extensible HTML, Based on XML</li>
+                    <li>All tags and theirs attributes must be typed in lower case;</li>
+                    <li>The value of any attribute must be enclosed in quotation marks;</li>
+                    <li>You must close all tags, even those that do not have a closing tag;</li>
+                    <li>Must follow the rules of correct tags nesting;</li>
+                    <li>You can not use a shortened tag attributes (without the quotes);</li>
+                    <li>Always specify &lt;!DOCTYPE&gt;</li>
+                  </ul>
+                </section>
+                <section data-markdown>
+                  <script type="text/template">
+                  #### HTML Document consists of 5 main parts
+                  ``` html
+                  <!DOCTYPE html>
+                  <html>
+                    <head>
+                      <title>This text will be in browser tag</title>
+                    </head>
+                    <body>
+                      This is the visible part of page
+                    </body>
+                  </html>
+                  ```
+                  </script>
+                </section>
+                <section>
+                  <section>
+                    <h3>HEAD tags</h3>
+                    <ul>
+                      <li>&lt;title&gt; (this element is required in an 
+                      HTML document)</li> 
+                      <li>&lt;style&gt; - contains custom css rules</li>
+                      <li>&lt;base&gt; - changes ase part of uri</li>
+                      <li>&lt;link&gt; - links css or other source</li> 
+                      <li>&lt;meta&gt; - represents any metadata information</li>
+                      <li>&lt;script&gt; - contains custom script</li>
+                    </ul>
+                  </section>
+                  <section data-markdown>
+                    <script type="text/template">
+                    #### [Useful head and meta tags](https://developer.mozilla.org/en/docs/Web/HTML/Element/meta)
+                    ``` html
+                    <head>
+                      <title>Some Page Title</title>
+                      <meta charset="utf-8">
+                      <link rel="stylesheet" href="css/reveal.css">
+                      <style>
+                        .important-text {
+                          color: red;
                         }
-                        .table-demo th,
-                        .table-demo td {
-                            padding: 5px;
-                            border: 1px solid #ccc;
-                            border-bottom: 1px solid #ccc !important;
-                         }   
-                        </style>
-                        <div>
-                        <table class="table-demo">
-                            <thead>
-                                <tr>
-                                    <th>Bus number</th>
-                                    <th>Price</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>3А</td>
-                                    <td rowspan="2">3 hrn</td>
-                                </tr>
-                                <tr>
-                                    <td>25</td>
-                                </tr>
-                                <tr>
-                                    <td>133</td>
-                                    <td>4 hrn</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </pre> 
-                <div class="half">      
-                    <div style="text-align: left; font-size: 18px; margin-left: 20px;">
-                        <div>&lt;table class="table-demo"&gt;</div>
-                            <div>&nbsp;&lt;thead&gt;</div>
-                                <div>&nbsp;&nbsp;&lt;tr&gt;</div>
-                                    <div>&nbsp;&nbsp;&nbsp;&lt;th&gt;Bus number&lt;/th&gt;</div>
-                                    <div>&nbsp;&nbsp;&nbsp;&lt;th&gt;Price&lt;/th&gt;</div>
-                                <div>&nbsp;&nbsp;&lt;/tr&gt;</div>
-                            <div>&nbsp;&lt;/thead&gt;</div>
-                            <div>&nbsp;&lt;tbody&gt;</div>
-                                <div>&nbsp;&nbsp;&lt;tr&gt;</div>
-                                    <div>&nbsp;&nbsp;&nbsp;&lt;td&gt;3А&lt;/td&gt;</div>
-                                    <div>&nbsp;&nbsp;&nbsp;&lt;td rowspan="2"&gt;3 hrn&lt;/td&gt;</div>
-                                <div>&nbsp;&nbsp;&lt;/tr&gt;</div>
-                                <div>&nbsp;&nbsp;&lt;tr&gt;</div>
-                                    <div>&nbsp;&nbsp;&nbsp;&lt;td&gt;25&lt;/td&gt;</div>
-                                <div>&nbsp;&nbsp;&lt;/tr&gt;</div>
-                                <div>&nbsp;&nbsp;&lt;tr&gt;</div>
-                                    <div>&nbsp;&nbsp;&nbsp;&lt;td&gt;133&lt;/td&gt;</div>
-                                    <div>&nbsp;&nbsp;&nbsp;&lt;td&gt;4 hrn&lt;/td&gt;</div>
-                                <div>&nbsp;&nbsp;&lt;/tr&gt;</div>
-                            <div>&nbsp;&lt;/tbody&gt;</div>
-                        <div>&lt;/table&gt;</div>
-                    </div>
-                </div> 
-            </section>
+                      </style>
+                    </head>
+                    ```
+                    </script>
+                  </section>
+                </section>
+                <section data-markdown>
+                  <script type="text/template">
+                  ### Validation
+                  Validator checks the markup validity of Web documents in HTML and XHTML
+                  [validator.w3.org](http://validator.w3.org)
+                  </script>
+                </section>
+                <section>
+                  <h3>Markup tags and attributes</h3>
+                </section>
+                <section>
+                  <h3>Block and inline element</h3>
+                  <ul>
+                    <li>Block elements occupy all available width of container, height of these component is determined by its content, and it always starts on a new line.</li>
+                    <li>Inline elements are directly part of another element. They are mainly used to change the appearance of text or a logical selection.</li>
+                    <li>You can not insert an block elements into inline elements according to specification (eg `h1` in `a`).</li>
+                  </ul>
+                  <img src="img/blocks.png" alt="">
+                  </script>
+                </section>
+                <section>
+                  <h3>Headings (block)</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <h1>Heading 1</h1>
+                    <p>Lorem ipsum dot solor</p>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                    <p>Lorem ipsum dot solor</p>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <h1>Heading 1</h1>
+                    <p>Lorem ipsum dot solor</p>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                    <p>Lorem ipsum dot solor</p>
+                  </div>
+                </section>
+                <section>
+                  <h3>Paragraph, Preformatted, Blockquote</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <p>Lorem ipsum dot solor</p>
 
-            <section>
-                <h2 id="elements-with-no-semantic-meaning">Elements with no semantic meaning</h2>
-                <p>These tags are designed to highlight the portion of the document to change the appearance of the content but without creating additional semantic value fragment.</p>
-                <p>&lt;div&gt;</code> - block element</p>
-                <p>&lt;span&gt;</code> - inline element</p>
-            </section>    
-            <section>
-                <a href="https://validator.w3.org/">Validator</a> <br />
-                <a href="http://caniuse.com/">Can I use</a>  <br />
-            </section>    
-            <section>
-                <a href="http://www.w3schools.com/html/default.asp">W3Schools</a> <br />
-                <a href="https://developer.mozilla.org/en/docs/Web/HTML">MDN</a> <br />
-                <a href="http://htmlbook.ru/">Htmlbook</a> <br />
-                <a href="http://html5doctor.com/">Htmldoctor</a> <br />  
-            </section>
-            <section>
-                <div>Thank you!</div>
-                <div>Questions</div>  
-            </section>    
+                    <pre>Lorem 
+                        ipsum dot solor</pre>
+
+                    <blockquote>
+                      Lorem ipsum dot solor
+                    </blockquote>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <p>Lorem ipsum dot solor</p>
+                    <pre>Lorem 
+  ipsum dot solor</pre>
+                    <br>
+                    <blockquote>Lorem ipsum dot solor</blockquote>
+                  </div>
+                </section>
+                <section>
+                  <h3>Ordered list, List Item</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <ol>
+                      <li>Item first</li>
+                      <li>Item second</li>
+                    </ol>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <ol>
+                      <li>Item first</li>
+                      <li>Item second</li>
+                    </ol>
+                  </div>
+                </section>
+                <section>
+                  <h3>Unordered List</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <ul>
+                      <li>Item 1</li>
+                      <li>Item 2
+                          <ul>
+                              <li>Item 2.1</li>
+                              <li>Item 2.2</li>
+                          </ul>
+                      </li>
+                    </ul>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <ul>
+                      <li>Item 1</li>
+                      <li>Item 2
+                          <ul>
+                              <li>Item 2.1</li>
+                              <li>Item 2.2</li>
+                          </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </section>
+                <section>
+                  <h3>Definitions list</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <dl>
+                        <dt>Title 1</dt>
+                            <dd>Definition</dd>
+                        <dt>Title 2</dt>
+                            <dd>Definition</dd>
+                            <dd>Definition</dd>
+                    </dl>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <dl>
+                        <dt>Title 1</dt>
+                            <dd>Definition</dd>
+                        <dt>Title 2</dt>
+                            <dd>Definition</dd>
+                            <dd>Definition</dd>
+                    </dl>
+                  </div>
+                </section>
+                <section>
+                  <h3>Images (inline)</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <img src="img/picture.jpg" 
+                      alt="Назва картинки" />
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <img src="img/picture.jpg" alt="Назва картинки" />
+                  </div>
+                </section>
+                <section>
+                  <h3>Link aka Anchor (inline)</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <a href="http://cursor.education/">
+                      Go to cursor education site
+                    </a>
+                    <a href="http://cursor.education/">
+                      <img src="img/picture.jpg" 
+                      alt="Назва картинки" />
+                    </a>
+                    <a href="mailto:nowhere@mozilla.org">
+                      Send email to nowhere
+                    </a>
+                    <a href="tel:+491570156"> 
+                      +49 157 0156
+                    </a>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <a href="http://cursor.education/">
+                      Go to cursor education site
+                    </a>
+                    <a href="http://cursor.education/">
+                      <img src="img/picture.jpg" 
+                      alt="Назва картинки" />
+                    </a>
+                    <a href="mailto:nowhere@mozilla.org">
+                      Send email to nowhere&nbsp;
+                    </a>
+                    <a href="tel:+491570156">+49 157 0156</a>
+                  </div>
+                </section>
+                <section>
+                  <h3>Images (inline)</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <div id="attr-href">Inside link</div>
+                    <a href="#attr-href">
+                      Description of Same-Page Links
+                    </a>
+                    <a href="http://cursor.education/" 
+                      target="_blank">
+                      Go to cursor education site
+                    </a>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <div id="attr-href">Inside link</div>
+                    <a href="#attr-href">
+                      Description of Same-Page Links
+                    </a>
+                    <a href="http://cursor.education/" 
+                      target="_blank">
+                      Go to cursor education site
+                    </a>
+                  </div>
+                </section>
+                <section>
+                  <h3>Tables, Table tags</h3>
+                  <ul>
+                    <li>table - main table container</li>
+                    <li>thead - table header</li>
+                    <li>tfoot - table footer</li>
+                    <li>tbody - table body</li>
+                    <li>tr - table row</li>
+                    <li>td - table cell</li>
+                    <li>th - header table cell</li>
+                    <li>colspan, rowspan - merge cells horizontally or vertically</li>
+                    <li>caption - table caption</li>
+                  </ul>
+                </section>
+                <section>
+                  <h3>Tables</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <table>
+                      <caption>Prices for buses</caption>
+                      <thead>
+                          <tr>
+                              <th>Bus number</th>
+                              <th>Price</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>3А</td>
+                              <td rowspan=”2”>3 hrn</td>
+                          </tr>
+                          <tr>
+                              <td>25</td>
+                          </tr>
+                           <tr>
+                              <td>133</td>
+                              <td>4 hrn</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <table>
+                      <caption>Prices for buses</caption>
+                      <thead>
+                          <tr>
+                              <th>Bus number</th>
+                              <th>Price</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>3А</td>
+                              <td rowspan=”2”>3 hrn</td>
+                          </tr>
+                          <tr>
+                              <td>25</td>
+                          </tr>
+                           <tr>
+                              <td>133</td>
+                              <td>4 hrn</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </section>
+                <section>
+                  <div class="demo">
+                    <div style="overflow: hidden;">
+                      <p>Demo with some styles:</p>
+                      <table class="table-demo">
+                          <caption>Prices for buses</caption>
+                          <thead>
+                              <tr>
+                                  <th>Bus number</th>
+                                  <th>Price</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>3А</td>
+                                  <td rowspan="2">3 hrn</td>
+                              </tr>
+                              <tr>
+                                  <td>25</td>
+                              </tr>
+                               <tr>
+                                  <td>133</td>
+                                  <td>4 hrn</td>
+                              </tr>
+                          </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </section>
+                <section data-markdown>
+                  <script type="text/template">
+                    ### Elements with no semantic meaning
+
+                    These tags are designed to highlight the portion of the document to change the appearance of the content but without creating additional semantic value fragment.
+
+                    `<div>` - block element
+
+                    `<span>` - inline element
+                  </script>
+                </section>
+                <section>
+                  <h3>Special Characters and Signs</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <p>&euro; &#8364; &#x20AC;</p>
+                    <p>&copy; &trade; &laquo; &raquo;
+                    &amp; &nbsp; &lt; &gt;
+                    &ndash; &mdash; &nbsp; &amp;</p>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <p>&euro; &#8364; &#x20AC;</p>
+                    <p>&copy; &trade; &laquo; 
+                    &raquo;
+                    &amp; &nbsp; &lt; &gt;
+                    &ndash; &mdash; &nbsp; &amp;</p>
+                  </div>
+                </section>
+                <section data-markdown>
+                  <script type="text/template">
+                    ### Semantic Tags
+                    - `<article>`
+                    - `<section>`
+                    - `<aside>`
+                    - `<nav>`
+                    - `<figure>`
+                    - `<figcaption>`
+                    - `<header>`
+                    - `<footer>`
+                  </script>
+                </section>
+                <section data-markdown>
+                  <script type="text/template">
+                    ###  Semantic Tags
+                    Section represents big document section with similar data
+                    ``` html
+                    <section>
+                        <h1>Section photos</h1>
+                    </section>
+                    <section>
+                        <h1>Section videos</h1>
+                    </section>
+                    ```
+                  </script>
+                </section> 
+                <section data-markdown>
+                  <script type="text/template">
+                    ### Semantic Tags
+                    Article represents independent data item
+                     ``` html
+                    <article>
+                        <header>
+                            <h4><a href="#comment-2" rel="bookmark">Comment #2</a>
+                            by <a href="http://example.com/">Jack Osborne</a></h4>
+                        </header>
+                        <p>Pellentesque habitant morbi tristique senectus.</p>
+                    </article>
+                    ```
+                  </script>
+                </section>
+                <section data-markdown>
+                  <script type="text/template">
+                    ###  Semantic Tags
+                    Represents main navigation
+                    ``` html
+                    <nav>
+                        <ul>
+                            <li>Nav Link</li>
+                            <li>Nav Link</li>
+                            <li>Nav Link</li>
+                        </ul>
+                    </nav>
+                    ```
+                  </script>
+                </section> 
+                <section data-markdown>
+                  <script type="text/template">
+                    ###  Semantic Tags
+                    Represents content not related to main page theme or topic
+                    ``` html
+                    <aside>
+                        <h2>Blogroll</h2>
+                        <ul>
+                            <li><a href="#">My Friend</a></li>
+                            <li><a href="#">My Other Friend</a></li>
+                            <li><a href="#">My Best Friend</a></li>
+                        </ul>
+                    </aside>
+                    ```
+                  </script>
+                </section>
+                <section data-markdown>
+                  <script type="text/template">
+                    ###  Semantic Tags
+                    Represents containers footer and header, may be inside any block element, often are used for main header and footer
+                    ``` html
+                    <header>
+                        <h1>Header string</h1>
+                        <p>Other content</p>
+                    </header>
+
+                    <footer>
+                        <h1>Header string</h1>
+                        <p>Other content</p>
+                    </footer>
+                    ```
+                  </script>
+                </section>
+                <section data-markdown>
+                  <script type="text/template">
+                    ###  Semantic Tags
+                    Represents media container
+                    ``` html
+                    <figure>
+                        <img ... > (or video, table etc)
+                        <figcaption>A rabid unicorn goring a fairy.</figcaption>
+                    </figure>
+                    ```
+                  </script>
+                </section>
+                <section>
+                  <h3>Audio</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <audio controls>
+                      <source 
+                        src="horse.ogg" type="audio/ogg">
+                      <source 
+                        src="horse.mp3" type="audio/mpeg">
+                        <a href="music.oga">
+                          Download song
+                        </a>
+                    </audio>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <audio controls>
+                      <source src="horse.mp3" type="audio/mpeg">
+                        <a href="music.oga">Download song</a>
+                    </audio>
+                  </div>
+                </section>
+                <section>
+                  <h3>Video</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <video controls
+                      poster="img/picture.jpg" 
+                      width="240" height="240">
+                        <source 
+                          src="movie.mp4" type="video/mp4">
+                        <source 
+                          src="movie.ogg" type="video/ogg">
+                          <a href="video.ogv">
+                            Download song
+                          </a>
+                    </video>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <video controls
+                      poster="img/picture.jpg" width="240" height="240">
+                        <source 
+                          src="movie.mp4" type="video/mp4">
+                          <a href="video.ogv">Download song</a>
+                    </video>
+                  </div>
+                </section>
+                <section>
+                  <h3>SVG and Canvas</h3>
+                  <ul>
+                    <li>Provide native drawing functionality</li>
+                    <li>Completely integrated into HTML5 documents (part of DOM)</li>
+                    <li>Can be styled with CSS</li>
+                    <li>Can be controlled with JavaScript</li>
+                    <li>Use for animation, charts, images, pixel manipulation, and so on</li>
+                    <li>Canvas supports 2D and 3D (WebGL)</li>
+                  </ul>
+                </section>
+                <section>
+                  <h3>SVG</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <h4>HTML5 SVG Circle</h4>
+                    <svg id="svgelem" height="150" 
+                      xmlns="http://www.w3.org/2000/svg">
+                        <circle id="redcircle" cx="50" 
+                          cy="50" r="50" fill="red" />
+                    </svg>
+
+                    <h4>HTML5 SVG Rectangle</h4>
+                    <svg id="svgelem" height="150" 
+                      xmlns="http://www.w3.org/2000/svg">
+                        <rect id="redrect" width="300" 
+                          height="100" fill="red" />
+                    </svg>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <h4>HTML5 SVG Circle</h4>
+                    <svg id="svgelem" height="150" 
+                      xmlns="http://www.w3.org/2000/svg">
+                        <circle id="redcircle" cx="50" 
+                          cy="50" r="50" fill="red" />
+                    </svg>
+
+                    <h4>HTML5 SVG Rectangle</h4>
+                    <svg id="svgelem" height="150" 
+                      xmlns="http://www.w3.org/2000/svg">
+                        <rect id="redrect" width="300" 
+                          height="100" fill="red" />
+                    </svg>
+                  </div>
+                </section>
+                <section>
+                  <h3>Canvas</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                      <canvas id="rectangles" 
+                        width="150" height="150">
+                        <img src="img/picture.jpg" 
+                          width="150" height="150" 
+                          alt="Logo" />
+                      </canvas>
+                    ```
+                    ```javascript
+                    function draw() {
+                      var canvas = document.getElementById("rectangles");   // Get canvas element
+                      if (canvas.getContext) {
+                        var ctx = canvas.getContext("2d");                  // Draw here
+                        ctx.fillStyle = "rgb(200,0,0)";                     // Red fill color
+                        ctx.fillRect (10, 10, 55, 50);                      // Create a red rectangle
+                        ctx.fillStyle = "rgba(0, 0, 200, 0.5)";             // Blue fill color
+                        ctx.fillRect (30, 30, 55, 50);                      // Create a second rectangle
+                      }
+                    }
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <canvas id="rectangles" width="150" height="150">
+                      <img src="img/picture.jpg" width="150" height="150" alt="Logo" />
+                    </canvas>
+                    <script>
+                      function draw() {
+                        var canvas = document.getElementById("rectangles");   // Get canvas element
+                        if (canvas.getContext) {
+                          var ctx = canvas.getContext("2d");                  // Draw here
+                          ctx.fillStyle = "rgb(200,0,0)";                     // Red fill color
+                          ctx.fillRect (10, 10, 55, 50);                      // Create a red rectangle
+                          ctx.fillStyle = "rgba(0, 0, 200, 0.5)";             // Blue fill color
+                          ctx.fillRect (30, 30, 55, 50);                      // Create a second rectangle
+                        }
+                      }
+
+                      draw();
+                    </script>
+                  </div>
+                </section>
+                <section>
+                  <h3>Forms</h3>
+                  <ul>
+                    <li>HTML forms are used to create (rather primitive) GUIs on Web pages</li>
+                    <li>Usually the purpose is to ask the user for information</li>
+                    <li>The information is then sent back to the server</li>
+                    <li>A form is an area that can contain form elements</li>
+                    <li>The syntax is: `form ...form elements... form`</li>
+                    <li>Form elements include: buttons, checkboxes, text fields, radio buttons, drop-down menus, etc</li>
+                    <li>Other kinds of HTML tags can be mixed in with the form elements</li>
+                    <li>A form usually contains a Submit button to send the information in the form elements to the server</li>
+                  </ul>
+                </section>
+                <section>
+                  <h3>Form</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form action="script.php">
+                      <fieldset>
+                          <legend>User data</legend>
+                          <label for="userName">
+                            Enter your name:</label>
+                          <input type="text" 
+                            id="userName" />
+                      </fieldset>
+
+                      <fieldset>
+                        <input type="submit" name="Submit" 
+                          value="Send">
+                      </fieldset>
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form action="script.php">
+                      <fieldset>
+                          <legend>User data</legend>
+                          <label for="userName">Enter your name:</label>
+                          <input type="text" id="userName" />
+                      </fieldset>
+
+                      <fieldset>
+                        <input type="submit" name="Submit" value="Send">
+                      </fieldset>
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Text input</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <input type="text" 
+                        name="textfield" value="Hello">
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <form>
+                        <input type="text" 
+                          name="textfield" value="Hello">
+                      </form>
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Password input</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <input type="password" 
+                        name="pass" value="Hello">
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <form>
+                        <input type="password" 
+                          name="pass" value="Hello">
+                      </form>
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Textarea</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <textarea name="textarea" 
+                        cols="24" rows="2">
+                        Lorem ipsum dolor sit amet, 
+                        consectetur adipisicing elit. 
+                        Eveniet, ipsum, officia, 
+                        doloremque sapiente nesciunt dolore.
+                      </textarea>
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <form>
+                        <textarea name="textarea" 
+                          cols="24" rows="3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, ipsum, officia, doloremque sapiente nesciunt dolore.
+                        </textarea>
+                      </form>
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Buttons</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <input type="submit" 
+                        name="Submit" value="Submit">
+                      <input type="reset" 
+                        name="Submit2" value="Reset">
+                      <input type="button" 
+                        name="Submit3" value="Push Me">
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <input type="submit" 
+                        name="Submit" value="Submit">
+                      <input type="reset" 
+                        name="Submit2" value="Reset">
+                      <input type="button" 
+                        name="Submit3" value="Push Me">
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Checkboxes</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <input type="checkbox" 
+                        name="checkbox" 
+                        value="checkbox1" 
+                        checked> male <br>
+                      <input 
+                        type="checkbox" 
+                        name="checkbox"
+                        value="checkbox2" 
+                        checked> female
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                        <input type="checkbox" name="checkbox" value="checkbox1" checked> male <br>
+                        <input type="checkbox" name="checkbox" value="checkbox2" checked> female
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Radio buttons</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <input type="radio" 
+                        name="sex" 
+                        value="myValue1"> male<br>
+                      <input type="radio" 
+                        name="sex" 
+                        value="myValue2" 
+                        checked> female
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <input type="radio" name="sex" value="myValue1"> male<br>
+                      <input type="radio" name="sex" value="myValue2" checked> female
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Select box</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <select name="select">
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="BLUE">blue</option>
+                      </select>
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <select name="select">
+                          <option value="red">red</option>
+                          <option value="green">green</option>
+                          <option value="BLUE">blue</option>
+                      </select>
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Label</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                      ```html
+                      <label for="userName1">
+                        Enter your name:</label>
+                      <input type="text" 
+                        name="username" 
+                        id="userName" 
+                        value="Author Name" />
+                      <br>
+                      <label>
+                        Enter your name:
+                        <input type="text" 
+                          name="username" 
+                          value="Author Name" />
+                      </label>
+                      ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <label for="userName1">Enter name:</label> <input type="text" name="username" id="userName1" value="Author Name" /><br>
+                      <label>
+                        Enter name:
+                        <input type="text" name="username" value="Author Name" />
+                      </label>
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Hidden input</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <input type="hidden" 
+                        name="secretMessage" 
+                        value="hello">
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <input type="hidden" name="secretMessage" value="hello">
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Form fields attributes</h3>
+                </section>
+                <section>
+                  <h3>Placeholder</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <input type="search" 
+                        placeholder="search here..." />
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <input type="search" 
+                        placeholder="search here..." />
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Required</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <input type="text" required />
+                      <input type="submit" 
+                        name="Submit" value="Submit">
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <input type="text" required />
+                      <input type="submit" 
+                        name="Submit" value="Submit">
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Multiple, File input</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <input type="file" multiple />
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <input type="file" multiple />
+                    </form>
+                  </div>
+                </section>
+                 <section>
+                  <h3>Pattern</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      <p>A digit follow by 
+                        three uppercase letters</p>
+                      <input pattern="[0-9][A-Z]{3}" />
+                      <input type="submit" 
+                        name="Submit" value="Submit">
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      <p>A digit follow by 
+                        three uppercase letters</p>
+                      <input pattern="[0-9][A-Z]{3}" />
+                      <input type="submit" 
+                        name="Submit" value="Submit">
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>Other input types</h3>
+                  <div data-markdown class="w-1-2">
+                    <script type="text/template">
+                    ```html
+                    <form>
+                      Number: <input type="number">
+                      Range: <input type="range">
+                      Search: <input type="search">
+                      Tel: <input type="tel">
+                      Color: <input type="color">
+                    </form>
+                    ```
+                    </script>
+                  </div>
+                  <div class="w-1-2 demo">
+                    <form>
+                      Number: <input type="number"><br><br>
+                      Range: <input type="range"><br><br>
+                      Search: <input type="search"><br><br>
+                      Tel: <input type="tel"><br><br>
+                      Color: <input type="color"><br><br>
+                    </form>
+                  </div>
+                </section>
+                <section>
+                  <h3>That's it about HTML for now</h3>
+                </section>
+                <section>
+                  <h3>Links from presentation</h3>
+                  <ul>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">Global Attributes</a></li>
+                    <li><a href="https://developer.mozilla.org/en/docs/Web/HTML/Element/meta">Useful meta tags</a></li>
+                    <li><a href="validator.w3.org">HTML Validator</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial">SVG Tutorial</a></li>
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial">Canvas Tutorial</a></li>
+                    <li><a href="https://webref.ru/">Справочник по HTML5</a></li>
+                  </ul>
+                </section>
+              </div>  
+            </div>
         </div>
-    </div> 
-
-    <script src="http://cursor-education.github.io/style/reveal/lib/js/head.min.js"></script>
-    <script src="http://cursor-education.github.io/style/reveal/js/reveal.js"></script>
-    <script src="http://cursor-education.github.io/style/reveal/main.js"></script> 
-</body>
+        <script src="js/reveal.js"></script>
+        <script type="text/javascript" src="lib/js/head.min.js"></script>
+        <script>
+            Reveal.initialize({
+              history: true,
+              dependencies: [
+                { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/notes/notes.js' }
+              ]
+            });
+        </script>
+    </body>
 </html>
